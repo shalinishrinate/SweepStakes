@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sweep_Stakes
 {
-    class Program
+    class UserInterface
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }

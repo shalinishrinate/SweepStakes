@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Sweep_Stakes
 {
-    class Program
+    class Contestant
     {
-        static void Main(string[] args)
-        {
-        }
+        string firstName;
+        string lastName;
+        int registrationNumber;
+        string emailAddress;
     }
 }

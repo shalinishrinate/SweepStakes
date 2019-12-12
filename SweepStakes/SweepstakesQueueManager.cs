@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sweep_Stakes
+namespace SweepStakes
 {
-    class Program
+    class SweepstakesQueueManager
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
