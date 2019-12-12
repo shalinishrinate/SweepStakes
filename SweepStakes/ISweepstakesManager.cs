@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections;
 
 namespace SweepStakes
 {
-    class SweepstakesQueueManager:ISweepstakesManager
+    interface ISweepstakesManager
     {
-        void InsertSweepstakes();
+        interface ICreateCars
+        {
+            void InsertSweepstakes(Sweepstakes sweepstakes);
+        }
     }
 }
