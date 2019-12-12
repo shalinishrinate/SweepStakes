@@ -8,12 +8,12 @@ namespace Sweep_Stakes
 {
     class SweepStakes
     {
-        Dictionary<int, Contestant> sweepStakesContestants = new Dictionary<int, Contestant>();
-        string name;
+        Dictionary<int, Contestant> sweepStakesContestants;
 
-        public SweepStakes(string name)
+        public SweepStakes()
         {
-            this.name = name;
+            sweepStakesContestants = new Dictionary<int, Contestant>();
+            
         }
 
         public void RegisterContestant(Contestant contestant)
@@ -26,19 +26,23 @@ namespace Sweep_Stakes
 
         public string PickWinner()
         {
-            //Random random = new Random();
-            //return random.Next(min, max);
+            Random random = new Random();
+            int winner = random.Next(sweepStakesContestants.Count); // key from the dictionary
+            Contestant contestantWinner = sweepStakesContestants[winner]; // find value pair to key with the index
+            return contestantWinner.FirstName + " " + contestantWinner.LastName;// now we can call the first name and last name associated with it
         }
 
         public void PrintContestantInfo(Contestant contestant)
         {
+            string winnerInfo = contestant.FirstName + "\n" +
+                                contestant.LastName + "\n" +
+                                contestant.EmailAddress + "\n";
 
+            Console.WriteLine(winnerInfo);
+            Console.ReadLine();
         }
 
-        //Sweepstakes(string name)
-        //void RegisterContestant(Contestant contestant)
-        //string PickWinner()
-        //void PrintContestantInfo(Contestant contestant)
+       
 
     }
 }

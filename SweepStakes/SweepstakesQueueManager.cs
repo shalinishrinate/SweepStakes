@@ -7,8 +7,8 @@ using System.Collections;
 
 namespace SweepStakes
 {
-    class SweepstakesQueueManager:ISweepstakesManager
-    {
-        void InsertSweepstakes();
-    }
+    //class SweepstakesQueueManager:ISweepstakesManager
+    //{
+    //    void InsertSweepstakes();
+    //}
 }

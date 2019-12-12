@@ -8,6 +8,6 @@ namespace SweepStakes
 {
     class SweepstakesStackManager
     {
-        void InsertSweepstakes();
+        //void InsertSweepstakes();
     }
 }

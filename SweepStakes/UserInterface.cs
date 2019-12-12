@@ -29,14 +29,7 @@ namespace Sweep_Stakes
             return Console.ReadLine().ToLower();
         }
 
-        public static string GetRegistrationNumber()
-        {
-            counter++;
-            registrationNum = counter;
-            //Console.WriteLine("Please enter your registration number " +
-            //       "that you received at the time of registration.");
-            return registrationNum;
-        }  
         
+
     }
 }
