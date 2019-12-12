@@ -6,34 +6,37 @@ using System.Threading.Tasks;
 
 namespace Sweep_Stakes
 {
-    class UserInterface
+    public class UserInterface
     {
-        public static string getUserFirstName()
+        public int counter;
+        public int registrationNum;
+        public static string GetUserFirstName()
         {
-            firstName=Console.WriteLine("Please enter your First Name.");
-            return firstName;
+           Console.WriteLine("Please enter your First Name.");
+           return Console.ReadLine().ToLower();
         }
 
-        public static string getUserLastName()
+        public static string GetUserLastName()
         {
-            lastName=Console.WriteLine("Please enter your Last Name.");
-            return lastName;
+            Console.WriteLine("Please enter your Last Name.");
+            return Console.ReadLine().ToLower();
         }
 
-        public static int getRegistrationNumber()
+        public static string GetEmailAddress()
         { 
-            registrationNumber = Console.WriteLine("Please enter your email address where you would liked to " +
+            Console.WriteLine("Please enter your email address where you would liked to " +
             "be informed of the contest news");
-            return getRegistrationNumber;
+            return Console.ReadLine().ToLower();
         }
 
-        public static string getEmailAddress()
+        public static string GetRegistrationNumber()
         {
-            emailAddress = Console.WriteLine("Please enter your registration number " +
-                   "that you received at the time of registration.");
-            return getEmailAddress;
-        }
-               
+            counter++;
+            registrationNum = counter;
+            //Console.WriteLine("Please enter your registration number " +
+            //       "that you received at the time of registration.");
+            return registrationNum;
+        }  
         
     }
 }

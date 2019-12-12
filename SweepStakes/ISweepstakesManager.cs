@@ -8,9 +8,9 @@ namespace SweepStakes
 {
     interface ISweepstakesManager
     {
-        interface ICreateCars
-        {
-            void InsertSweepstakes(Sweepstakes sweepstakes);
-        }
+        void InsertSweepstakes(Sweepstakes sweepstakes);
+        
     }
 }
+
+

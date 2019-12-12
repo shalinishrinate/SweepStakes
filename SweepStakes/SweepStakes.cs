@@ -11,35 +11,23 @@ namespace Sweep_Stakes
         Dictionary<int, Contestant> sweepStakesContestants = new Dictionary<int, Contestant>();
         string name;
 
-        public string Name
+        public SweepStakes(string name)
         {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value;
-            }
+            this.name = name;
         }
 
-
-        //constructor
-        public Sweepstakes(string name)
-        {
-
-        }
-
-
-        // member methods (can do)
         public void RegisterContestant(Contestant contestant)
         {
+            
+            contestant.registrationNumber = sweepStakesContestants.Count + 1;
 
+            sweepStakesContestants.Add(contestant.registrationNumber,contestant);
         }
 
         public string PickWinner()
         {
-
+            //Random random = new Random();
+            //return random.Next(min, max);
         }
 
         public void PrintContestantInfo(Contestant contestant)

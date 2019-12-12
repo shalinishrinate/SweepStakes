@@ -6,24 +6,54 @@ using System.Threading.Tasks;
 
 namespace Sweep_Stakes
 {
-    public class Contestant
+     class Contestant
     {
-        //varibles
         string firstName;
         string lastName;
-        int registrationNumber;
+        public int registrationNumber;
         string emailAddress;
 
-        //constructor
         public Contestant()
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.registrationNumber = registrationNumber;
-            this.emailAddress = emailAddress;
-        }
+        firstName = UserInterface.GetUserFirstName();
+        lastName = UserInterface.GetUserLastName();
+        emailAddress = UserInterface.GetEmailAddress();
 
-        //method
+        }
+        public string FirstName
+        {
+            get
+            {
+                return firstName;
+            }
+            set
+            {
+                firstName = value;
+            }
+        }
+        public string LastName
+        {
+            get
+            {
+                return lastName;
+            }
+            set
+            {
+                lastName = value;
+            }
+        }
+        
+        public string EmailAddress
+        {
+            get
+            {
+                return emailAddress;
+            }
+            set
+            {
+                emailAddress = value;
+            }
+        }
     }
 }
    
