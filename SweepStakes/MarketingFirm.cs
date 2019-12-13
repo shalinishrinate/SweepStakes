@@ -10,13 +10,16 @@ namespace SweepStakes
     class MarketingFirm 
     {
         //SweepstakesQueueManager manager = new SweepstakesQueueManager();
+        //SweepstakesStackManager manager = new SweepstakesStackManager();
+        // so instead of going back and forth depending on which method, 
+        //queue or stack is chosen, and having to make a lot of changes everytime, 
+        //dependency injection should be chosen.
 
-        ISweepstakesManager _manager;
+        ISweepstakesManager manager; // creating a variable of a manager
 
         public MarketingFirm(ISweepstakesManager manager)
         {
-            _manager = manager;
-            
+            this.manager = manager;  
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Sweep_Stakes
 {
      public class Contestant
-    {
+     {
         string firstName;
         string lastName;
         public int registrationNumber;
@@ -18,7 +18,6 @@ namespace Sweep_Stakes
         firstName = UserInterface.GetUserFirstName();
         lastName = UserInterface.GetUserLastName();
         emailAddress = UserInterface.GetEmailAddress();
-
         }
         public string FirstName
         {
@@ -54,6 +53,6 @@ namespace Sweep_Stakes
                 emailAddress = value;
             }
         }
-    }
+     }
 }
    

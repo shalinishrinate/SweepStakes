@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SweepStakes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace Sweep_Stakes
             sweepstakes.PrintContestantInfo(contestant);
             Console.ReadLine();
 
+            
         }
     }
 }
