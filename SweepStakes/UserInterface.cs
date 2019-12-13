@@ -8,8 +8,7 @@ namespace Sweep_Stakes
 {
     public class UserInterface
     {
-        public int counter;
-        public int registrationNum;
+       
         public static string GetUserFirstName()
         {
            Console.WriteLine("Please enter your First Name.");
