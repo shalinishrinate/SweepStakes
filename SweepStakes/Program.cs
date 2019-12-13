@@ -14,8 +14,8 @@ namespace Sweep_Stakes
             SweepStakes sweepstakes = new SweepStakes();
             sweepstakes.RegisterContestant(contestant);
             sweepstakes.PickWinner();
-            //PrintContestantInfo(contestant);
-
+            sweepstakes.PrintContestantInfo(contestant);
+            Console.ReadLine();
 
         }
     }

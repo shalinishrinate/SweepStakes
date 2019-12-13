@@ -6,29 +6,29 @@ using System.Threading.Tasks;
 
 namespace Sweep_Stakes
 {
-    class SweepStakes
+    public class SweepstakesClass
     {
-        Dictionary<int, Contestant> sweepStakesContestants;
+        Dictionary<int, Contestant> sweepstakesContestants;
 
-        public SweepStakes()
+        public SweepstakesClass()
         {
-            sweepStakesContestants = new Dictionary<int, Contestant>();
+            sweepstakesContestants = new Dictionary<int, Contestant>();
             
         }
 
         public void RegisterContestant(Contestant contestant)
         {
             
-            contestant.registrationNumber = sweepStakesContestants.Count + 1;
+            contestant.registrationNumber = sweepstakesContestants.Count + 1; // the registration number is related to the count,
 
-            sweepStakesContestants.Add(contestant.registrationNumber,contestant);
+            sweepstakesContestants.Add(contestant.registrationNumber,contestant);
         }
 
         public string PickWinner()
         {
             Random random = new Random();
-            int winner = random.Next(sweepStakesContestants.Count); // key from the dictionary
-            Contestant contestantWinner = sweepStakesContestants[winner]; // find value pair to key with the index
+            int winner = random.Next(sweepstakesContestants.Count); // key from the dictionary
+            Contestant contestantWinner = sweepstakesContestants[winner]; // find value pair to key with the index
             return contestantWinner.FirstName + " " + contestantWinner.LastName;// now we can call the first name and last name associated with it
         }
 
