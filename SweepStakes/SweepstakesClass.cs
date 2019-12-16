@@ -3,21 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MimeKit;
+using Sweep_Stakes;
+
+
 
 namespace Sweep_Stakes
 {
     public class SweepstakesClass
     {
-        string name;
-        string contestantWinner;
+        public string name;
+       
+        Contestant contestantWinner;
 
         Dictionary<int, Contestant> sweepstakesContestants;
+
+        public SweepstakesClass()
+        {
+
+        }
 
         public SweepstakesClass(string name)
         {
             this.name = name;
             sweepstakesContestants = new Dictionary<int, Contestant>();
         }
+
+
 
         public void RegisterContestant(Contestant contestant)
         {
@@ -29,7 +41,7 @@ namespace Sweep_Stakes
         {
             Random random = new Random();
             int winner = random.Next(sweepstakesContestants.Count+1); // key from the dictionary
-            Contestant contestantWinner = sweepstakesContestants[winner]; // find value pair to key with the index
+            contestantWinner = sweepstakesContestants[winner]; // find value pair to key with the index
             return contestantWinner.FirstName + " " + contestantWinner.LastName;// now we can call the first name and last name associated with it
         }
 
@@ -59,7 +71,7 @@ namespace Sweep_Stakes
                 {
                     var message = new MimeMessage();
                     message.From.Add(new MailboxAddress("MarketingFirmAtSweepstakes"));
-                    message.To.Add(new MailboxAddress((participant.Value.FirstName + " " + participant.Value.LastName, participant.Value.EmailAddress));
+                    message.To.Add(new MailboxAddress(participant.Value.FirstName + " " + participant.Value.LastName, participant.Value.EmailAddress));
                     message.Subject = "Sweepstakes";
 
                     message.Body = new TextPart("plain")
