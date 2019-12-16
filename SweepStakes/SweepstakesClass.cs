@@ -9,6 +9,7 @@ namespace Sweep_Stakes
     public class SweepstakesClass
     {
         string name;
+        string contestantWinner;
 
         Dictionary<int, Contestant> sweepstakesContestants;
 
@@ -36,5 +37,40 @@ namespace Sweep_Stakes
         {
             UserInterface.DisplayWinner(contestant);
         }
+
+        public void SendMessage()
+        {
+            foreach (var participant in sweepstakesContestants)
+            {
+                if (participant.Key.Equals(contestantWinner.registrationNumber))
+                {
+                    var message = new MimeMessage();
+                    message.From.Add(new MailboxAddress("MarketingFirmAtSweepstakes"));
+                    message.To.Add(new MailboxAddress(contestantWinner.FirstName + " " + contestantWinner.LastName, contestantWinner.EmailAddress));
+                    message.Subject = "You are the WINNER!";
+
+                    message.Body = new TextPart("plain")
+                    {
+                        Text = @"contestWinner, you won the sweepstake!"
+                    };
+                }
+
+                else
+                {
+                    var message = new MimeMessage();
+                    message.From.Add(new MailboxAddress("MarketingFirmAtSweepstakes"));
+                    message.To.Add(new MailboxAddress((participant.Value.FirstName + " " + participant.Value.LastName, participant.Value.EmailAddress));
+                    message.Subject = "Sweepstakes";
+
+                    message.Body = new TextPart("plain")
+                    {
+                        Text = @"Unfortunately, you did not win this contest. Thanks for taking part in it."
+                    };
+
+                }
+
+            }
+        }
+            
     }
 }
