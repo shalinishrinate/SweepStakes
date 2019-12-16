@@ -24,21 +24,13 @@ namespace Sweep_Stakes
             get
             {
                 return firstName;
-            }
-            set
-            {
-                firstName = value;
-            }
+            }   
         }
         public string LastName
         {
             get
             {
                 return lastName;
-            }
-            set
-            {
-                lastName = value;
             }
         }
         
@@ -47,10 +39,6 @@ namespace Sweep_Stakes
             get
             {
                 return emailAddress;
-            }
-            set
-            {
-                emailAddress = value;
             }
         }
      }

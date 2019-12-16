@@ -36,30 +36,19 @@ namespace Sweep_Stakes
 
             return Console.ReadLine(); 
         }
-        
-        // ask the user what kind of manager like to use
 
         public static string QueueOrStackManager()
         {
-            //string QueueOrStock;
-            //string userInput;
-
+            string queueOrStack;
             Console.WriteLine("Where would you like to store the Sweepstakes. Enter 1 for Queue or 2 for Stack");
-            string input = Console.ReadLine();
-            return input;
+            return queueOrStack = Console.ReadLine();
+           
+        }
 
-            //switch (QueueOrStock)
-            //{
-            //    case 1:
-
-            //        break;
-            //    case 2:
-
-            //        break;
-            //    default:
-            //        Console.WriteLine(" Not a valid number, please enter 1 for Queue, or 2 for Stack.");
+        public static string GetSweepstakeName()
+        {
+            Console.WriteLine("Enter name of the sweepstake");
+            return Console.ReadLine();
         }
     }
-
-    // MarketingFirm marketingFirm = new MarketingFirm();
 }

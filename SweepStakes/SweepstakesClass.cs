@@ -16,14 +16,11 @@ namespace Sweep_Stakes
         {
             this.name = name;
             sweepstakesContestants = new Dictionary<int, Contestant>();
-            
         }
 
         public void RegisterContestant(Contestant contestant)
         {
-            
             contestant.registrationNumber = sweepstakesContestants.Count + 1; // the registration number is related to the count,
-
             sweepstakesContestants.Add(contestant.registrationNumber,contestant);
         }
 
@@ -38,13 +35,6 @@ namespace Sweep_Stakes
         public void PrintContestantInfo(Contestant contestant)
         {
             UserInterface.DisplayWinner(contestant);
-
-            //string winnerInfo = contestant.FirstName + "\n" +
-            //                    contestant.LastName + "\n" +
-            //                    contestant.EmailAddress + "\n";
-
-            //Console.WriteLine(winnerInfo);
-            //Console.ReadLine();
         }
     }
 }
